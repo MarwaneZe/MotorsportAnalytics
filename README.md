@@ -26,69 +26,51 @@ Place the dataset at the following path:
 
 ```
 ./VED-master/Data/VED_DynamicData_Part1/VED_171101_week.csv
-```
 
 You can adjust the path in the notebook if your folder structure is different.
 
----
+⚡ Requirements
 
-## ⚡ Requirements
+Python 3.9+ and the following libraries:
 
-- Python 3.9+
-
-Install the required libraries with:
-
-```bash
 pip install numpy pandas matplotlib folium haversine
-```
 
----
+📝 Usage
+Clone this repository:
 
-## 📝 Usage
-
-**1. Clone this repository:**
-
-```bash
 git clone https://github.com/MarwaneZe/MotorsportAnalytics.git
 cd ev-gps-analysis
-```
 
-**2.** Make sure the dataset (or a sample dataset) exists in the expected folder.
+Make sure the dataset or sample dataset exists in the expected folder.
 
-**3. Open the Jupyter Notebook:**
+Open the Jupyter Notebook:
 
-```bash
 jupyter notebook
-```
 
-**4.** Run the notebook cells to calculate trip distances, durations, and generate maps.
+Run the notebook cells to calculate trip distances, durations, and generate maps.
 
----
+📊 Output
 
-## 📊 Output
+For each trip:
 
-For each trip, the notebook produces:
+Distance (km)
 
-| Output | Description |
-|---|---|
-| Distance | Total trip distance in kilometers |
-| Duration | Total trip duration in minutes |
-| Map | Interactive trajectory map saved as `trip_<trip_id>_map.html` |
+Duration (minutes)
 
-Open any `.html` file in your web browser to explore the routes interactively.
+Trajectory plotted on a map (trip_<trip_id>_map.html)
 
----
+You can open the .html files in a web browser to view the routes.
 
-## 📌 Notes
+🔧 Project Structure
+ev-gps-analysis/
+├── VED-master/                  # (ignored) Full dataset folder
+├── sample_data.csv              # Small dataset for testing
+├── notebook.ipynb               # Main analysis notebook
+├── README.md                    # Project description
+└── .gitignore                   # To ignore the dataset
+📌 Notes
 
-The notebook is modular and can be extended for:
+The notebook is modular and can be extended for lap simulations, energy consumption analysis, or real-time visualization.
 
-- Lap simulations
-- Energy consumption analysis
-- Real-time visualization
-
----
-
-## 📄 License
-
-Free to use and modify.
+📄 License
+free to use and modify.
