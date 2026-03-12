@@ -1,72 +1,94 @@
-EV GPS Trajectory Analysis :
+# 🚗⚡ EV GPS Trajectory Analysis
 
-This repository contains a Python Jupyter Notebook that analyzes EV (Electric Vehicle) GPS data to:
+A Python Jupyter Notebook that analyzes EV (Electric Vehicle) GPS data to calculate trip metrics and visualize trajectories on real-world maps.
 
-Calculate total distance traveled for each trip.
+## 📋 Overview
 
-Calculate trip duration.
+This project serves as a base framework for GPS-based EV data analysis. It enables you to:
 
-Plot the trajectory of each trip on a real-world map using Folium.
+- Calculate total distance traveled for each trip
+- Calculate trip duration
+- Plot the trajectory of each trip on a real-world map using Folium
 
-This project serves as a base framework for GPS-based EV data analysis.
+---
 
-📂 Dataset
+## 📂 Dataset
 
-The notebook uses the VED dataset:
-VED_171101_week.csv from the VED Dynamic Data Part 1 collection.
+The notebook uses the **VED (Vehicle Energy Dataset)**:
 
-Important: The dataset is not included in this repository due to its size. You need to download it separately.
+> `VED_171101_week.csv` from the [VED Dynamic Data Part 1](https://github.com/gsoh/VED.git) collection.
 
-Dataset Location
+> ⚠️ **Important:** The dataset is not included in this repository due to its size. You need to download it separately.
 
-Place the dataset in the following path: https://github.com/gsoh/VED.git
+### Dataset Location
 
+Place the dataset at the following path:
+
+```
 ./VED-master/Data/VED_DynamicData_Part1/VED_171101_week.csv
+```
 
 You can adjust the path in the notebook if your folder structure is different.
 
-⚡ Requirements
+---
 
-Python 3.9+ and the following libraries:
+## ⚡ Requirements
 
+- Python 3.9+
+
+Install the required libraries with:
+
+```bash
 pip install numpy pandas matplotlib folium haversine
+```
 
-📝 Usage
-Clone this repository:
+---
 
+## 📝 Usage
+
+**1. Clone this repository:**
+
+```bash
 git clone https://github.com/MarwaneZe/MotorsportAnalytics.git
 cd ev-gps-analysis
+```
 
-Make sure the dataset or sample dataset exists in the expected folder.
+**2.** Make sure the dataset (or a sample dataset) exists in the expected folder.
 
-Open the Jupyter Notebook:
+**3. Open the Jupyter Notebook:**
 
+```bash
 jupyter notebook
+```
 
-Run the notebook cells to calculate trip distances, durations, and generate maps.
+**4.** Run the notebook cells to calculate trip distances, durations, and generate maps.
 
-📊 Output
+---
 
-For each trip:
+## 📊 Output
 
-Distance (km)
+For each trip, the notebook produces:
 
-Duration (minutes)
+| Output | Description |
+|---|---|
+| Distance | Total trip distance in kilometers |
+| Duration | Total trip duration in minutes |
+| Map | Interactive trajectory map saved as `trip_<trip_id>_map.html` |
 
-Trajectory plotted on a map (trip_<trip_id>_map.html)
+Open any `.html` file in your web browser to explore the routes interactively.
 
-You can open the .html files in a web browser to view the routes.
+---
 
-🔧 Project Structure
-ev-gps-analysis/
-├── VED-master/                  # (ignored) Full dataset folder
-├── sample_data.csv              # Small dataset for testing
-├── notebook.ipynb               # Main analysis notebook
-├── README.md                    # Project description
-└── .gitignore                   # To ignore the dataset
-📌 Notes
+## 📌 Notes
 
-The notebook is modular and can be extended for lap simulations, energy consumption analysis, or real-time visualization.
+The notebook is modular and can be extended for:
 
-📄 License
-free to use and modify.
+- Lap simulations
+- Energy consumption analysis
+- Real-time visualization
+
+---
+
+## 📄 License
+
+Free to use and modify.
